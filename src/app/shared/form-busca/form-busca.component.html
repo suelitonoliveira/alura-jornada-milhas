@@ -1,0 +1,17 @@
+<app-card variant="secondary" class="form-busca">
+    <form>
+        <h2>Passagens</h2>
+        <div class="flex-container">
+            <mat-button-toggle-group aria-label="Tipo de passagem" [value]="'ida-e-volta'" [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()">
+                <mat-button-toggle value="ida-e-volta">IDA E VOLTA</mat-button-toggle>
+                <mat-button-toggle value="somente-ida">SOMENTE IDA</mat-button-toggle>
+              </mat-button-toggle-group>
+              <mat-chip-listbox class="form-busca" aria-label="passagens">
+                <mat-chip-option *ngFor="let item of passagem; let i = index" [selected]="i === 0">
+                  {{item}}
+                </mat-chip-option>
+              </mat-chip-listbox>
+                         
+        </div>
+    </form>
+</app-card>
